@@ -1,0 +1,213 @@
+/* roomEntry.css */
+
+.room-entry-page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.room-entry-card {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  background-color: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 36px 32px;
+  box-sizing: border-box;
+}
+
+.app-title {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  text-align: center;
+}
+
+.app-subtitle {
+  color: #9a9a9a;
+  font-size: 14px;
+  margin: 0 0 28px 0;
+  text-align: center;
+  line-height: 1.5;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary {
+  background-color: #ffffff;
+  color: #0a0a0a;
+}
+
+.btn-primary:hover {
+  background-color: #e2e2e2;
+}
+
+.btn-secondary {
+  background-color: #1c1c1c;
+  color: #ffffff;
+  border: 1px solid #2f2f2f;
+}
+
+.btn-secondary:hover {
+  background-color: #232323;
+  border-color: #3a3a3a;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 24px 0;
+}
+
+.divider-line {
+  flex: 1;
+  height: 1px;
+  background-color: #2a2a2a;
+}
+
+.divider-text {
+  color: #7a7a7a;
+  font-size: 12px;
+  margin: 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.room-code-input {
+  width: 100%;
+  padding: 12px 14px;
+  background-color: #1c1c1c;
+  border: 1px solid #2f2f2f;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.room-code-input::placeholder {
+  color: #6b6b6b;
+}
+
+.room-code-input:focus {
+  border-color: #4a4a4a;
+}
+
+.helper-text {
+  color: #7a7a7a;
+  font-size: 12px;
+  text-align: center;
+  margin: 20px 0 0 0;
+  line-height: 1.5;
+}
+
+/* Overlay */
+
+.overlay-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.overlay-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 340px;
+  background-color: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.overlay-title {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 4px 0;
+  text-align: center;
+}
+
+/* Responsive */
+
+@media (max-width: 480px) {
+  .room-entry-card {
+    padding: 28px 20px;
+  }
+
+  .app-title {
+    font-size: 20px;
+  }
+
+  .app-subtitle {
+    font-size: 13px;
+  }
+
+  .overlay-card {
+    max-width: 90%;
+    padding: 22px 18px;
+  }
+
+  .overlay-title {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .room-entry-card {
+    padding: 22px 16px;
+  }
+
+  .btn {
+    font-size: 13px;
+    padding: 11px 14px;
+  }
+
+  .room-code-input {
+    font-size: 13px;
+    padding: 11px 12px;
+  }
+}

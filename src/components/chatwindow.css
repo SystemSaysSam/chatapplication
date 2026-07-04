@@ -1,0 +1,238 @@
+/* chatWindow.css */
+
+.chat-window-page {
+  min-height: 100vh;
+  width: 100%;
+  background-color: #0a0a0a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.chat-container {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  height: 640px;
+  background-color: #141414;
+  border: 1px solid #2a2a2a;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* Header */
+
+.chat-header {
+  padding: 16px 20px;
+  background-color: #161616;
+  border-bottom: 1px solid #2a2a2a;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.chat-header-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.room-code {
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.connected-users {
+  color: #8a8a8a;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Chat messages */
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.chat-messages::-webkit-scrollbar {
+  display: none;
+}
+
+.message-bubble {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-sizing: border-box;
+  word-wrap: break-word;
+}
+
+.message-incoming {
+  align-self: flex-start;
+  background-color: #16233a;
+  border: 1px solid #1f3252;
+  border-bottom-left-radius: 4px;
+}
+
+.message-outgoing {
+  align-self: flex-end;
+  background-color: #14261c;
+  border: 1px solid #1f3d2c;
+  border-bottom-right-radius: 4px;
+}
+
+.message-text {
+  color: #ededed;
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Input bar */
+
+.chat-input-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 16px;
+  background-color: #161616;
+  border-top: 1px solid #2a2a2a;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.chat-input {
+  flex: 1;
+  padding: 11px 14px;
+  background-color: #1e1e1e;
+  border: 1px solid #2f2f2f;
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease;
+}
+
+.chat-input::placeholder {
+  color: #6b6b6b;
+}
+
+.chat-input:focus {
+  border-color: #4a4a4a;
+}
+
+.send-button {
+  padding: 11px 18px;
+  background-color: #1b3a63;
+  color: #ffffff;
+  border: 1px solid #234a7d;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.send-button:hover {
+  background-color: #204a7d;
+  border-color: #2d5f9c;
+}
+.leave-chat{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.leave-chat button{
+    padding: 10px;
+    color: white;
+    font-weight: 500;
+    background-color: rgba(255, 0, 0, 0.601);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* Responsive */
+
+@media (max-width: 520px) {
+  .chat-window-page {
+    padding: 0;
+  }
+
+  .chat-container {
+    max-width: 100%;
+    height: 100vh;
+    border-radius: 0;
+    border: none;
+  }
+}
+
+@media (max-width: 360px) {
+  .chat-header {
+    padding: 14px 16px;
+  }
+
+  .room-code {
+    font-size: 13px;
+  }
+
+  .connected-users {
+    font-size: 11px;
+  }
+
+  .chat-messages {
+    padding: 16px;
+  }
+
+  .message-bubble {
+    max-width: 85%;
+  }
+
+  .chat-input-bar {
+    padding: 12px;
+  }
+
+  .send-button {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}
+
+.leave-button {
+  padding: 7px 14px;
+  background-color: #2a1414;
+  color: #e8a0a0;
+  border: 1px solid #3d1f1f;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.leave-button:hover {
+  background-color: #3a1818;
+  border-color: #4d2626;
+}
